@@ -1,0 +1,5 @@
+/vendor
+.env
+
+src/storage/donations.json
+src/storage/tokens.json

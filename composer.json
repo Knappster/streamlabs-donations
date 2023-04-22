@@ -1,0 +1,19 @@
+{
+    "name": "kn4ppster/streamlabs",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Kn4ppster\\Streamlabs\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Carl Knapp"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.5",
+        "vlucas/phpdotenv": "^5.5"
+    }
+}
