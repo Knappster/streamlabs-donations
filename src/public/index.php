@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require_once(__DIR__ . '/../../vendor/autoload.php');
 
 use GuzzleHttp\Client;
@@ -44,7 +46,7 @@ if (!isset($_GET['code'])) {
     );
 
     $auth_tokens = json_decode($response->getBody(), true);
-    file_put_contents(__DIR__ . '/../storage/tokens.json', json_encode($auth_tokens));
+    $_SESSION['auth_tokens'] = $auth_tokens;
     header('Location: /home', true, 302);
     exit();
 }
