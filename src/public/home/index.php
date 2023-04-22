@@ -30,6 +30,6 @@ if ($tokens !== false && isset($tokens['access_token'])) {
     $donations = json_decode($response->getBody(), true);
     $donations_json = json_encode($donations, JSON_PRETTY_PRINT);
     file_put_contents(__DIR__ . '/../../storage/donations.json', $donations_json);
-    echo '<h1>Donations</h1>';
-    echo '<pre>' . print_r($donations_json, true) . '</pre>';
+    header('Content-Type: application/json; charset=utf-8');
+    echo $donations_json;
 }
